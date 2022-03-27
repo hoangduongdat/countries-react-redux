@@ -1,0 +1,45 @@
+.toggleButton {
+    width: 60px;
+    height:26px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 2px 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background: var(--ToggleButtonBackground)
+}
+
+.Cricle {
+    width: 22px;
+    height: 22px;
+    border-radius:50%;
+    background: #fff;
+    transition: all 0,2s ease;
+
+}
+
+.Icon {
+    color: var(--IconSwitchColor);
+    font-size:22px;
+    margin-top: 6px;
+    transition: all 0,2s ease;
+}
+
+.Input:checked ~ .Cricle {
+    transform: translateX(-28px);
+    -webkit-transform: translateX(-28px);
+    -ms-transform: translateX(-28px);
+}
+
+.Input:checked ~ .Icon {
+    transform: translateX(28px);
+    -webkit-transform:translateX(28px);
+    -ms-transform: translateX(28px);
+}
+
+.Input {
+    height:0;
+    width: 0;
+    opacity: 0;
+}
